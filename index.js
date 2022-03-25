@@ -5,7 +5,7 @@ let exphbs = require('express-handlebars')
 const app = express()
 
 
-const PORT = 8000
+const PORT = 8001
 
 //vistas
 app.set('views', path.join(__dirname, 'views'))
@@ -23,7 +23,15 @@ app.use(express.static('public'))
 
 //Rutas
 app.get('/', function (req, res) {
+  res.render('main')
+})
+
+app.get('/tarea/views/index.hbs', function (req, res) {
   res.render('index')
+})
+
+app.get('/tarea/views/contacto.hbs', function (req, res) {
+  res.render('contacto')
 })
 
 app.get('/hola2', function (req, res) {
@@ -33,7 +41,9 @@ app.get('/hola2', function (req, res) {
 app.listen(PORT, function(err){
   if (err) console.log(err)
 
-  console.log('Servidor funcionando en el puerto' + PORT)
+  console.log('Servidor funcionando en el puerto ' + PORT)
   console.log(__dirname)
 })
+
+
 

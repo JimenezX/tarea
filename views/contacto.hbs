@@ -1,0 +1,29 @@
+<body class="body-contacto">
+    
+<section class="section-contacto">
+<form action="" class="form">
+    
+    <fieldset>
+<legend>Formulario CID</legend>
+    <label for="" class="l1">Nombre:</label><br>
+    <input type="text" placeholder="Ingrese su nombre" class="input1"><br>
+    <br>
+    <br>
+    <label for="" class="lmail">E-mail:</label><br>
+    <input type="email" placeholder="Ingrese su e-mail" name="" id="email" class="email">
+    <br>
+        <input type="file" class="file-contacto" placeholder="Arrastra o inserta el archivo"><br>
+        <br>
+    <input type="submit" value="Enviar" class="boton-contacto" id="boton-contacto">
+    </fieldset>
+    </section>
+</form>
+</body>
+<script>
+
+    const botonEnviar = document.getElementById('boton-contacto')
+    botonEnviar.onclick = (e) =>{
+        alert('Datos enviados')
+    }
+    
+</script>
